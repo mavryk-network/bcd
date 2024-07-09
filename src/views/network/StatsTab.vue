@@ -11,7 +11,7 @@
                   <span class="text--secondary">deployments</span>
                 </h3>
               </v-list-item-title>
-              <v-list-item-subtitle class="text--secondary caption">the number of originated contracts excluding manager.tz</v-list-item-subtitle>
+              <v-list-item-subtitle class="text--secondary caption">the number of originated contracts excluding manager.mv</v-list-item-subtitle>
             </v-list-item-content>
             <v-list-item-action>
               <v-btn-toggle v-model="deployments.period" dense mandatory>

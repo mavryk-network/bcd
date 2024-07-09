@@ -31,7 +31,7 @@
                 >Balance</v-list-item-subtitle
                 >
                 <v-list-item-title class="body-2">
-                    <span>{{ balance | uxtz }}</span>
+                    <span>{{ balance | umav }}</span>
                 </v-list-item-title>
             </v-list-item-content>
         </v-list-item>

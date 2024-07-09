@@ -4,7 +4,7 @@ export const downloadFileFormContent = (content, name) => {
         "href",
         "data:text/plain;charset=utf-8," + encodeURIComponent(content)
     );
-    element.setAttribute("download", name + ".tz");
+    element.setAttribute("download", name + ".mv");
     element.style.display = "none";
     document.body.appendChild(element);
 

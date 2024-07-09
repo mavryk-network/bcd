@@ -104,7 +104,7 @@
         dense
         :label="isStorage ? 'balance' : 'amount'"
         type="number"
-        placeholder="mutez"
+        placeholder="mumav"
     ></v-text-field>
   </div>
 </template>

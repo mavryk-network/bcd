@@ -58,7 +58,7 @@ export default {
                 this.itemClass = 'hash secondary--text';
                 this.itemValue = this.operation.entrypoint + '()';
             } else {
-                this.itemValue = this.$options.filters.uxtz(this.operation.amount ? this.operation.amount : 0);
+                this.itemValue = this.$options.filters.umav(this.operation.amount ? this.operation.amount : 0);
             }
         },
     }

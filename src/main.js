@@ -43,6 +43,9 @@ import {roundDownSignificantDigits, SIFormatter} from "./utils/number";
 import {isKT1Address, isOperationHash, isTzAddress} from "./utils/tz";
 import {isOldBigMapRoute} from "./utils/url";
 
+import * as buffer from "buffer";
+window.Buffer = buffer.Buffer;
+
 Vue.component('draggable', draggable);
 Vue.component('VJsf', VJsf)
 
@@ -89,9 +92,9 @@ Vue.filter('fromNow', function (value) {
   }
 })
 
-Vue.filter('uxtz', function (value) {
+Vue.filter('umav', function (value) {
   let xtz = (value / 1000000).toLocaleString(undefined, { maximumFractionDigits: 6 });
-  return `${xtz} \uA729`;
+  return `${xtz} \u1E41`;
 })
 
 
@@ -100,7 +103,7 @@ Vue.filter('milligas', function (value) {
   return `${gas}`;
 })
 
-Vue.filter('mutez', function (value) {
+Vue.filter('mumav', function (value) {
   let xtz = (value / 1000000).toLocaleString(undefined, { maximumFractionDigits: 6 });
   return `${xtz}`;
 })
@@ -146,9 +149,8 @@ let tokenMetadata = new TokenMetadataApi(process.env.VUE_APP_TOKEN_METADATA_API)
 let metadataService = new MetadataAPI(process.env.VUE_APP_METADATA_API_URI);
 let stats = new StatsAPI({
   'mainnet': process.env.VUE_APP_MAINNET_STATS_API_URI,
-  'ghostnet': process.env.VUE_APP_GHOSTNET_STATS_API_URI,
-  'nairobinet': process.env.VUE_APP_TESTNET_STATS_API_URI,
-  'oxfordnet': process.env.VUE_APP_OXFORDNET_STATS_API_URI,
+  'basenet': process.env.VUE_APP_BASENET_STATS_API_URI,
+  'atlasnet': process.env.VUE_APP_ATLASNET_STATS_API_URI,
 });
 
 const darkLocalStorage = localStorage.getItem('dark');

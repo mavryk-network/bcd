@@ -83,7 +83,7 @@ import SchemaMichelson from "./schemaDialog/SchemaMichelson";
 import SchemaAlertOpHashSuccess from "./schemaAlert/SchemaAlertOpHashSuccess";
 import SchemaHeader from "./schemaComponents/SchemaHeader";
 import SchemaAlertCustomSuccess from "./schemaAlert/SchemaAlertCustomSuccess";
-import { TezosOperationType, AbortedBeaconError, BroadcastBeaconError, defaultEventCallbacks } from '@airgap/beacon-sdk'
+import { TezosOperationType, AbortedBeaconError, BroadcastBeaconError, defaultEventCallbacks } from '@mavrykdynamics/beacon-sdk'
 import {Wallet, isCustom} from "@/utils/wallet";
 import { approveData } from "@/utils/approve";
 import ConfirmDialog from "@/components/Dialogs/ConfirmDialog";
@@ -275,7 +275,7 @@ export default {
     tezosClientActionCallback() {
       return this.isParameter
           ? () => {
-            this.fireEvent("Tezos Client", "interact");
+            this.fireEvent("Mavkit Client", "interact");
             this.generateParameters(false, true);
           }
           : null;
@@ -330,7 +330,7 @@ export default {
       }
 
       return async () => {
-        this.fireEvent("Tezos Client", "fork");
+        this.fireEvent("Mavkit Client", "fork");
         await this.fork();
       }
     },
@@ -352,7 +352,7 @@ export default {
           callback: this.michelsonActionCallback()
         },
         {
-          text: "Tezos-client",
+          text: "Mavkit-client",
           icon: "mdi-console-line",
           callback: this.tezosClientActionCallback()
         },

@@ -36,7 +36,7 @@
                             <span class="overline">Balance</span>
                         </v-list-item-title>
                         <v-list-item-subtitle>
-                            <span class="hash">{{ info.balance | uxtz }}</span>
+                            <span class="hash">{{ info.balance | umav }}</span>
                         </v-list-item-subtitle>
                     </v-list-item-content>
                 </v-list-item>
