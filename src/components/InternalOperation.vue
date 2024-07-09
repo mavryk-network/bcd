@@ -5,10 +5,10 @@
         <InfoItem title="Counter"  v-if="data.counter" :subtitle="String(data.counter)" />
       </v-col>
       <v-col cols="2">
-        <InfoItem title="Burned" :subtitle="(burned || 0) | uxtz" />
+        <InfoItem title="Burned" :subtitle="(burned || 0) | umav" />
       </v-col>
       <v-col cols="2">
-        <InfoItem title="Fee" :subtitle="(data.fee || 0) | uxtz" />
+        <InfoItem title="Fee" :subtitle="(data.fee || 0) | umav" />
       </v-col>
       <v-col cols="2">
         <InfoItem title="Gas limit" :subtitle="String(data.gas_limit || 0)" />
@@ -155,7 +155,7 @@
         <InfoItem
           v-if="data.kind !== 'delegation'"
           title="Amount"
-          :subtitle="(isNaN(data.amount) ? 0 : data.amount) | uxtz"
+          :subtitle="(isNaN(data.amount) ? 0 : data.amount) | umav"
         />
       </v-col>
       <v-col cols="2" v-if="data.delegate || data.kind === 'delegation'">
@@ -175,7 +175,7 @@
         <InfoItem title="Paid storage diff" :subtitle="paidStorageDiff" />
       </v-col>
       <v-col cols="2" v-if="allocationFee">
-        <InfoItem title="Allocation fee" :subtitle="allocationFee | uxtz" />
+        <InfoItem title="Allocation fee" :subtitle="allocationFee | umav" />
       </v-col>
     </v-row>
 

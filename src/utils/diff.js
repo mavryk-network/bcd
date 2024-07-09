@@ -18,7 +18,8 @@ function parseDiffType(diffType) {
 }
 
 function formatValue(val, typ) {
-    if (typ === "mutez") {
+    console.log("BINGO", val)
+    if (typ === "mumav") {
         let xtz = (val / 1000000).toLocaleString(undefined, { maximumFractionDigits: 6 });
         return `${xtz} \uA729`;
     } else if (typ === "timestamp") {
@@ -90,7 +91,7 @@ function deducePrim(x) {
         if (/({|}|DIP|DUP|CAR|FAILWITH|Pair|Left|Right|Unit|Elt)/.test(x.value)) {
             return 'lambda';
         }
-        if (/^"(tz|KT)[1-9A-HJ-NP-Za-km-z]{34}"$/.test(x.value)) {
+        if (/^"(mv|KT)[1-9A-HJ-NP-Za-km-z]{34}"$/.test(x.value)) {
             return 'address';
         }
         if (/^\d+$/.test(x.value)) {

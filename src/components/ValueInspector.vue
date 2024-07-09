@@ -106,8 +106,8 @@ export default {
   },
   computed: {
     suffix() {
-      if (this.prim === "mutez") {
-        return "utz";
+      if (this.prim === "mumav") {
+        return "umv";
       }
       return null;
     },

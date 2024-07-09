@@ -57,7 +57,7 @@
             >
               <v-list-item-content>
                 <v-list-item-title class="hash">{{
-                  value.flow | uxtz
+                  value.flow | umav
                 }}</v-list-item-title>
                 <v-list-item-subtitle
                   class="font-weight-light hash text--secondary"
@@ -72,7 +72,7 @@
             <v-list-item class="fill-height pl-2" v-if="value && !value.mempool && !isNaN(value.total_cost) ">
               <v-list-item-content>
                 <v-list-item-title class="hash">{{
-                  value.total_cost | uxtz
+                  value.total_cost | umav
                 }}</v-list-item-title>
                 <v-list-item-subtitle
                   class="font-weight-light hash text--secondary"

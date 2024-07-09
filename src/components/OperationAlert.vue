@@ -20,7 +20,7 @@
             <span
               v-else-if="err.id.includes('contract.balance_too_low')"
               style="word-break: break-all"
-            >: {{ err.balance | uxtz }} &lt; {{ err.amount | uxtz }}</span>
+            >: {{ err.balance | umav }} &lt; {{ err.amount | umav }}</span>
           </span>
         </v-col>
         <v-spacer></v-spacer>

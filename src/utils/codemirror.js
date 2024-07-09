@@ -23,7 +23,7 @@ export function create() {
             { regex: /(?:SELF_ADDRESS|SELF|CONTRACT|TRANSFER_TOKENS|SET_DELEGATE|CREATE_CONTRACT|IMPLICIT_ACCOUNT|NOW|AMOUNT|BALANCE|STEPS_TO_QUOTA|SOURCE|SENDER|ADDRESS|CHAIN_ID|SAPLING_VERIFY_UPDATE|SAPLING_EMPTY_STATE|TOTAL_VOTING_POWER|VOTING_POWER|LEVEL|TICKET|READ_TICKET|SPLIT_TICKET|JOIN_TICKETS)(?=\s|;|\}|$)/, token: "atom" },
             // type
             { regex: /(?:option|list|set|contract|pair|or|lambda|map|big_map|ticket)(?=\s|\)|$)/, token: "tag" },
-            { regex: /(?:key|unit|never|signature|operation|address|int|nat|string|bytes|mutez|bool|key_hash|baker_hash|timestamp|chain_id|sapling_state|sapling_transaction|bls12_381_fr|bls12_381_g1|bls12_381_g2|tx_rollup_l2_address|chest_key|chest)(?=\s|\)|\}|;|$)/, token: "variable" },
+            { regex: /(?:key|unit|never|signature|operation|address|int|nat|string|bytes|mumav|bool|key_hash|baker_hash|timestamp|chain_id|sapling_state|sapling_transaction|bls12_381_fr|bls12_381_g1|bls12_381_g2|tx_rollup_l2_address|chest_key|chest)(?=\s|\)|\}|;|$)/, token: "variable" },
             // macros
             { regex: /(?:IF_SOME|FAIL|ASSERT|ASSERT_NONE|ASSERT_SOME|ASSERT_LEFT|ASSERT_RIGHT|(?:SET|MAP)_C[AD]+R)(?=\s|;|\}|$)/, token: "string-2" },
             { regex: /(?:DII+P|C[AD]{2,}R|DUU+P|P[PAI]{3,}R|UNP[PAI]{3,}R)(?=\s|;|\}|$)/, token: "string-2" },

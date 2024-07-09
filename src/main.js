@@ -92,7 +92,7 @@ Vue.filter('fromNow', function (value) {
   }
 })
 
-Vue.filter('uxtz', function (value) {
+Vue.filter('umav', function (value) {
   let xtz = (value / 1000000).toLocaleString(undefined, { maximumFractionDigits: 6 });
   return `${xtz} \u1E41`;
 })
@@ -103,7 +103,7 @@ Vue.filter('milligas', function (value) {
   return `${gas}`;
 })
 
-Vue.filter('mutez', function (value) {
+Vue.filter('mumav', function (value) {
   let xtz = (value / 1000000).toLocaleString(undefined, { maximumFractionDigits: 6 });
   return `${xtz}`;
 })

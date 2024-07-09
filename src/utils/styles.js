@@ -16,7 +16,7 @@ export function applyStyles(node) {
         if (node.prim === "contract") {
             node["x-display"] = "custom-contract";
         }
-        if (node.prim === "nat" || node.prim === "mutez") {
+        if (node.prim === "nat" || node.prim === "mumav") {
             node["x-display"] = "custom-nat"
         }
         if (node.prim === "bytes" || node.prim === "bls12_381_fr" || node.prim === "bls12_381_g1" || node.prim === "bls12_381_g2") {
